@@ -19,7 +19,7 @@ public class PersonaService {
 	}
 	
 	public List <PersonaDto> buscarTodos () {
-		return repositorio.buscarTodos().stream().map((p)->new PersonaDto(p.getNombre())).toList();
+		return repositorio.buscarTodos().stream().map((p)->new PersonaDto(p.getNombre().toUpperCase())).toList();
 	}
 
 }
